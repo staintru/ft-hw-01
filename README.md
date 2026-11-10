@@ -63,7 +63,7 @@ sudo apt update && sudo apt install terraform
 
 ![image](https://github.com/staintru/ft-hw-01/blob/main/02.png)
 
-4. Отсутствует имя для ресурса Все блоки ресурсов должны иметь 2 метки (тип, имя). Для docker_image надо добавить имя, например: resource "docker_image" "nginx" {
+4. Отсутствует имя для ресурса. Все блоки ресурсов должны иметь 2 метки (тип, имя). Для docker_image надо добавить имя, например: resource "docker_image" "nginx"
 
 Недопустимое имя ресурса Имя должно начинаться с буквы или подчеркивания и может содержать только буквы, цифры, подчеркивания и дефисы. Для "docker_container" ```"lnginx"``` надо изменить имя на допустимое, например: "nginx".
 
@@ -87,7 +87,7 @@ sudo apt update && sudo apt install terraform
 
 ![image](https://github.com/staintru/ft-hw-01/blob/main/09.png)
 
-8. В resource "docker_image" "nginx" значение переменной ```keep_locally``` установили ```true```, тем самы мы определили именно сохранить локально. Тем самым сообщив провайдеру, что при удалении контейнера или ресурса сам образ локальном хранилище Docker не удалять.
+8. В resource "docker_image" "nginx" значение переменной ```keep_locally``` установили ```true```, определили именно сохранить локально. Тем самым сообщив провайдеру, что при удалении контейнера или ресурса сам образ в локальном хранилище Docker не удалять.
 
 ![image](https://github.com/staintru/ft-hw-01/blob/main/10.png)
 
